@@ -65,15 +65,15 @@ It’s Retrieval-Augmented Generation done right — fast, grounded, and transpa
 
 ## 📂 Project Structure
 
-inance-assistant/
-├── app.py # Streamlit app entry point
-├── llama_interface.py # Handles LLaMA prompting logic
-├── financial_news.py # FAISS-based news retrieval
-├── news.json # Source news articles
-├── models/ # Contains LLaMA GGUF model
+Finance-assistant/
+├── app.py
+├── llama_interface.py 
+├── financial_news.py 
+├── news.json 
+├── models/ 
 │ └── llama-2-7b-chat.Q8_0.gguf
-├── README.md # This file
-└── requirements.txt # Dependencies
+├── README.md 
+└── requirements.txt 
 
 
 ---
