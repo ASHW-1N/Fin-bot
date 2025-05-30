@@ -29,7 +29,7 @@ Welcome to your personal finance research assistant.
 - "How did markets in Asia perform today?"  
 - "Why is gold rising?"  
 """)
-    st.markdown("🚀 [View on GitHub](https://github.com/your-repo-link)")
+    st.markdown("🚀 [View on GitHub](https://github.com/ASHW-1N/Fin-bot.git)")
 
 # Initialize session (news only fetched once)
 if "fetched" not in st.session_state:
