@@ -31,13 +31,13 @@ Welcome to your personal finance research assistant.
 """)
     st.markdown("🚀 [View on GitHub](https://github.com/ASHW-1N/Fin-bot.git)")
 
-# Initialize session (news only fetched once)
+# Initialize session
 if "fetched" not in st.session_state:
     with st.spinner("🔄 Fetching latest financial news..."):
         fetch_and_index_news()
     st.session_state.fetched = True
 
-# Header image (optional)
+# Header image
 st.image("assets/banner.jpg", use_container_width=True)  # ✅ updated
 
 # Main UI

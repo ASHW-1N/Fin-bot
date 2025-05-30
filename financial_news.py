@@ -4,10 +4,10 @@ import faiss
 import numpy as np
 import os
 
-# ✅ Load model once
+#  Load model once
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# ✅ Dummy fetch function (replace with actual logic or API/file load)
+#  Dummy fetch function
 def load_news():
     """Load news articles from a local file or API. Expected format: List of dicts."""
     try:
@@ -18,7 +18,7 @@ def load_news():
         print("❌ Error loading news:", e)
         return []
 
-# ✅ Safely process and encode news
+# Safely process and encode news
 def fetch_and_index_news():
     articles = load_news()
 
@@ -33,7 +33,7 @@ def fetch_and_index_news():
             for article in articles
         ]
     elif isinstance(articles[0], str):
-        news_articles = articles  # already cleaned strings
+        news_articles = articles  
     else:
         raise ValueError("Unsupported article format.")
 
@@ -51,10 +51,10 @@ def fetch_and_index_news():
 
     return index
 
-# ✅ Global FAISS index
+#  Global FAISS index
 faiss_index = fetch_and_index_news()
 
-# ✅ Retrieve similar news using the FAISS index
+#  Retrieve similar news using the FAISS index
 def retrieve_similar_news(query, top_k=3):
     if faiss_index is None:
         return ["No news index available."]
